@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Feed ME!, Anzu!</title>
+  <title id="t1">Feed ME!, Anzu!</title>
   <meta charset="UTF-8">
   <style>    #form
     {
@@ -58,6 +58,7 @@ br{
       const detectlang=navigator.language||navigator.languages[0];
     if (detectlang.includes("ja"))
     {
+            document.getElementById("t1").innerText="あんずがたべたい。";
       document.getElementById("000").innerText="このプログラムが動作しない場合は、このページを再読み込みしてください。";
       document.getElementById("001").innerText="あんずがたべたい。";
       document.getElementById("002").innerText="あんずちゃんにあんずを食べさせるだけのサイトです。";
