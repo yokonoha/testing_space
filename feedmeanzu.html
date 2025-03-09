@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Feed ME!, Anzu!</title>
+  <meta charset="UTF-8">
+  <style>    #form
+    {
+    width: 100%;
+    background-color:white;
+    }
+    body
+    {
+background-color: rgb(138, 177, 217);
+    }
+    footer
+{
+    width: 100vw;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    background-color:#0a0a0a;
+     overflow: hidden;
+     border-bottom: 15px solid #d0f4b7;
+     color: #dff8ea;
+}
+p{
+  user-select: none;
+}
+h1{
+  user-select: none;
+}
+br{
+  user-select: none;
+}
+    </style>
+</head>
+<body>
+  <header style="background-color: #d0f4b7;"><p>Y.Yokoha Testing Space</p>
+  <p id="000">If this program does not work, please reload this page.</p></header>
+  <br>
+  <h1 id="001">Feed ME!, Anzu!</h1>
+  <p id="002">A site that made Anzu-chan just feed apricots.</p>
+  <canvas id="form"></canvas>
+  <p id="003">Hit the enter key or Click on the white Anzu lane to feed more Anzu(apricots) to Anzu-Chan!</p>
+  <p id="004">The counter state will be saved on your browser's local storage.</p>
+  <br>
+  <h2><b><span id="countertext">0</span></b> <span id="005">apricots</span></h2>
+<br>
+<br>
+  <footer>
+  <p>Made by YokochaYokoha for fun.</p>
+  <p>©2025 Y.Yokoha All Rights Reseerved.</p>
+</footer>
+</body>
+<script src="./animations.js"></script>
+<script>
+      const detectlang=navigator.language||navigator.languages[0];
+    if (detectlang.includes("ja"))
+    {
+      document.getElementById("000").innerText="このプログラムが動作しない場合は、このページを再読み込みしてください。";
+      document.getElementById("001").innerText="あんずがたべたい。";
+      document.getElementById("002").innerText="あんずちゃんにあんずを食べさせるだけのサイトです。";
+      document.getElementById("003").innerText="エンターキーを連打、または白いあんずが流れるレーンをクリック(連打)すると、杏子ちゃんに沢山あんずを食べさせられます。ストレス解消に、暇つぶしに、どうぞ。";
+      document.getElementById("004").innerText="カウンターの状態は、ブラウザのローカルストレージに保存されます。";
+      document.getElementById("005").innerText="個";
+    }
+</script>
+</html>
