@@ -1,0 +1,558 @@
+/*
+       FSLinear -Free & Smart Linear Style Sheet
+       Rev.1.0
+       Works by Y.Yokoha Studio Project
+       https://yokonoha.github.io/yokoha-st
+       https://github.com/yokonoha/FSLinear
+       Compatible with Caffeine Style Sheet
+*/
+
+body 
+{
+    font-family: Arial, sans-serif ;
+    margin: 0;
+    padding: 0;
+    background-color: #020202;
+    color: #dff8ea;
+display: flex;
+flex-direction: column;
+align-items: center;
+overflow-x: hidden;
+
+}
+a:link
+{
+    color: #0b8a20;
+    text-decoration: none;
+}
+a:visited
+{
+    color: #0b8a20;
+    text-decoration: none;
+}
+header
+{
+       background-color:#0a0a0a;
+       border-bottom:15px solid #d0f4b7;
+       width: 100vw;
+    position: relative;
+    overflow: hidden;
+    height: 60%;
+    display: flex;
+flex-direction: column;
+align-items: center;
+    h3
+    {
+      background-color: #9fdb77;  
+    }
+}
+.cnt
+{
+    /*CaffeineCSSで使用していたcnt(stem)はスペース用divに変更(互換パーツ)*/
+    /*1スペース=cntdiv4個*/
+    margin: 0;
+    width: 15px;
+    flex-grow: 1;
+}
+.space
+{
+    height: 40px;
+    margin: 0;
+    width: 15px;
+
+    flex-grow: 1;
+}
+.marks-container
+{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+.marks-container-nowrap
+{
+    display: flex;
+    justify-content: left;
+}
+.marks-r-g
+{
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom:4px solid #d0f4b7;
+    border-top: 4px solid #d0f4b7;
+    background-color: #3a3a3a;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    user-select: none;
+    max-width: 900px;
+    
+    
+}
+.marks-r-b
+{
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom:4px solid #b7e6f4;
+    border-top: 4px solid #b7e6f4;
+    background-color: #3a3a3a;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    user-select: none;
+    max-width: 900px;
+    
+    
+}
+.marks-r-r
+{
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom:4px solid #f4b7b7;
+    border-top: 4px solid #f4b7b7;
+    background-color: #3a3a3a;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    user-select: none;
+    max-width: 900px;
+    
+    
+}
+.marks-r-y
+{
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom:4px solid #ebf4b7;
+    border-top: 4px solid #ebf4b7;
+    background-color: #3a3a3a;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    user-select: none;
+    max-width: 900px;
+    
+    
+}
+.marks-r-o
+{
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom:4px solid #f4d8b7;
+    border-top: 4px solid #f4d8b7;
+    background-color: #3a3a3a;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    user-select: none;
+    max-width: 900px;
+    
+    
+}
+.marks-r-b2
+{
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom:4px solid #b7c5f4;
+    border-top: 4px solid #b7c5f4;
+    background-color: #3a3a3a;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    user-select: none;
+    max-width: 900px;
+    
+    
+}
+.whitemark
+{
+       padding: 20px;
+       background-color: #fafff7;
+       
+       border-radius: 5px 5px 5px 5px;
+       
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+       color: #0a0a0a;
+}
+.A
+{
+padding: 20px;
+background-color: #121f27;
+border-style: solid;
+border-width: 1px;
+border-color: #fcfcfc;
+border-left: 15px solid #9fdb77;
+box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+
+max-width: 900px;
+
+margin: 0;
+}
+.title
+{
+    display: flex;
+
+    align-items: center;
+}
+
+.B
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #77b3db;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.C
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #db7777;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.D
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #c477db;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.E
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #dba477;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.F
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #dbc977;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.G
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #bddb77;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.H
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #77dbba;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.I
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #7779db;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.J
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #db7790;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.K
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #db7795;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.L
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #f37979;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.M
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #f3a679;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.N
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #f3e179;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.O
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #a6f379;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.P
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #79f3c4;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.Q
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #79f3f3;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.R
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #79a0f3;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.S
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #bc79f3;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.T
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #f379d5;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.U
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #f37993;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.V
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #5dd477;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.W
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #4069db;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.X
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #ff5757;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.Y
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #32ff5e;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+.Z
+{
+       padding: 20px;
+       background-color: #121f27;
+       border-style: solid;
+       border-width: 1px;
+       border-color: #fcfcfc;
+       border-left: 15px solid #f7ea3c;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+       
+       max-width: 900px;
+       
+       margin: 0;
+}
+footer
+{
+    width: 100vw;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    background-color:#0a0a0a;
+     overflow: hidden;
+     border-bottom: 15px solid #d0f4b7;
+     
+}
+/*FSlinear Rev.1*/
+/*©2025 Y.Yokoha All Rights Reserved.*/
+/*This style sheet is licensed under the Y.Yokoha A License.*/

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Anzu Bot Verifier/ロボットによる操作ではないことを確認します。</title>
+  <meta charset="UTF-8">
+  <link href="fslinear.css" rel="stylesheet" id="caffeinetheme"/>
+</head>
+<body>
+  <div class="A" >
+    <h2>Bot Verifier/ボット確認</h2>
+    <p>This is a verification page.<br>It checks that you are not a robot.<br>Please drag an Apricot to the character's mouth in the top left corner and press the Check button.</p>
+    <p>こちらは認証ページです。<br>あなたがロボットではないことを確認させて下さい。<br>ボックス内右上のキャラクターの口元にあんずをドラッグして確認ボタンを押して下さい。</p>
+    <button onclick="resetpos()">Reset/リセット</button>
+    <br>
+    <br>
+    <canvas id="puzzle" width="300px" height="300px" style="background-color: bisque;"></canvas>
+    <br>
+    <button onclick="doneandcheck()">Check/確認</button>
+    <br>
+    <br>
+    <button onclick="forcemove()" style="display: none;" id="forcemv">The screen will automatically switch after 3 seconds. If it does not, click here.<br>3秒後に自動で画面が切り替わります。切り替わらない場合はここをクリックしてください。</button>
+    <br>
+    <br>
+    <p>Bot verifier system developed by Y.Yokoha</p>
+    <p>杏子ちゃんのボット確認システム by Y.Yokoha</p>
+  </div>
+
+</body>
+<script>
+
+function mv2thepage() {
+  //ボット対策 ミニ難読化
+  const a=["https://","http://","ftp://","content://","file://"];
+  const b="abcdefghijklmnopqrstuvwxyz";
+  const c="1234567890";
+  const d=`!"#$%&'()=~-^@|*+<>,./?_`;
+  const e="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  //URLを難読化して貼り付けます。
+  const url2go=a[0]+b[24]+b[14]+b[10]+b[14]+b[13]+b[14]+b[7]+b[0]+d[20]+b[6]+b[8]+b[19]+b[7]+b[20]+b[1]+d[20]+b[8]+b[14]+d[21]+b[24]+b[14]+b[10]+b[14]+b[7]+b[0]+d[11]+b[18]+b[19];
+  window.location.href=url2go;
+}
+
+function forcemove() {
+  mv2thepage();
+}
+const canvas = document.getElementById("puzzle");
+const ctx = canvas.getContext("2d");
+
+const anzuchansizeyoko=100;
+const anzuchansizetate=100;
+
+
+const a = new Image();
+a.src="2.png";
+
+
+
+const c  =new Image();
+c.src="anzu.png";
+
+//初期位置指定をしておくところ。
+const aposition = { x:0 , y:0 ,h:100};//H:height&Width(widthを統合)
+
+let cposition = { x:canvas.width/2 , y:canvas.height/2 ,h:40};
+
+a.onload=c.onoad=()=>{refleshimgstate()};
+
+function refleshimgstate()
+{
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.drawImage(a,aposition.x,aposition.y,aposition.h,aposition.h);
+    ctx.drawImage(c,cposition.x,cposition.y,cposition.h,cposition.h);
+    
+}
+flagtsukanderu=false;
+canvas.addEventListener("mousedown",(zahyo)=>{
+let imadokoX = zahyo.clientX;
+let imadokoY = zahyo.clientY;
+if(imadokoX>=cposition.x&&imadokoX<=cposition.x+c.width&&imadokoY>=cposition.y&&imadokoY<=cposition.y+c.height)
+{
+    flagtsukanderu=true;
+    Xdiff=imadokoX-cposition.x;
+    Ydiff=imadokoY-cposition.y;
+}
+});
+canvas.addEventListener("mousemove",(e)=>{
+    if(flagtsukanderu)
+    {
+        cposition.x=e.clientX-Xdiff;
+        cposition.y=e.clientY-Ydiff;
+        refleshimgstate();
+    }
+});
+canvas.addEventListener("mouseup",()=>{
+    flagtsukanderu=false;
+});
+canvas.addEventListener("mouseleave",()=>{
+    flagtsukanderu=false;
+});
+canvas.addEventListener("touchstart",(zahyo)=>{
+  zahyo.preventDefault();
+  let imadokoX = zahyo.touches[0].clientX;
+let imadokoY = zahyo.touches[0].clientY;
+if(imadokoX>=cposition.x&&imadokoX<=cposition.x+c.width&&imadokoY>=cposition.y&&imadokoY<=cposition.y+c.height)
+{
+    flagtsukanderu=true;
+    Xdiff=imadokoX-cposition.x;
+    Ydiff=imadokoY-cposition.y;
+}
+});
+canvas.addEventListener("touchmove",(e)=>{
+  if(flagtsukanderu)
+    {
+        cposition.x=e.touches[0].clientX-Xdiff;
+        cposition.y=e.touches[0].clientY-Ydiff;
+        refleshimgstate();
+    }
+});
+canvas.addEventListener("touchend",()=>{
+    flagtsukanderu=false;
+});
+
+
+//念押しタイマー(表示されるようにする!)
+  refleshimgstate();
+  setInterval(() => {
+    refleshimgstate();
+    clearInterval();
+  }, 1000);
+
+  function doneandcheck(){
+    let resA={x:aposition.x,y:aposition.y,w:a.width,h:a.height};
+    let resB={x:cposition.x,y:cposition.y,w:c.width,h:c.height};
+    console.log(resA,resB);
+    console.log(resB.x,resB.y);
+    if(resB.x<41&&resB.x>6&&resB.y<47&&resB.y>4)
+  {
+cposition.x=-10000;
+    a.src="3.png";
+    aposition.h=canvas.width;
+    console.log("Certified!");
+    refleshimgstate();
+    document.getElementById("forcemv").style.display="block";
+    setInterval(() => {
+      mv2thepage();
+      clearInterval();
+    }, 3000);
+  }
+};
+
+function resetpos() {
+  cposition = { x:canvas.width/2 , y:canvas.height/2 ,h:40};
+  refleshimgstate();
+};
+</script>
+</html>
