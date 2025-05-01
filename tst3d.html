@@ -9,7 +9,7 @@
   </head>
   <!--
    
-  This app uses model-viewer (Licenced under Apache Licence 2.0)
+  This app uses model-viewer (Licensed under Apache Licence 2.0)
   
                                  Apache License
                            Version 2.0, January 2004
@@ -263,7 +263,7 @@ THE SOFTWARE.
 
     <div class="G">
       <p>オープンソースライセンス表示 / This app uses model-viewer (licensed under Apache License 2.0), which incorporates three.js (licensed under the MIT License).</p>
-<textarea readonly name="OSL" rows="20" cols="20" style="width: 100%;resize: none;">This app uses model-viewer (Licenced under Apache Licence 2.0)
+<textarea readonly name="OSL" rows="20" cols="20" style="width: 100%;resize: none;">This app uses model-viewer (Licensed under Apache Licence 2.0)
   
    Apache License
 Version 2.0, January 2004
@@ -511,8 +511,12 @@ THE SOFTWARE.</textarea>
       });
     </script>
        <script>
-         const oss = 'Enter the correct password!!'; // パスワードを設定
-         const password = oss[0]+oss[1]+oss[7]+oss[2]; // パスワードを設定
+         //見てる方いるかな?こんにちは~
+         //すっごく単純なログインシステムデスヨネ。
+         //...作れそうだったから作っただけ(私も単純。)。
+         
+         const oss = 'Enter the correct password!!'; 
+         const password = oss[0]+oss[1]+oss[7]+oss[2]; 
          const submitButton = document.getElementById('submit');
          const passwordInput = document.getElementById('password');
          const errorMessage = document.getElementById('error');
@@ -525,7 +529,7 @@ THE SOFTWARE.</textarea>
              errorMessage.style.display = 'none';
              errorMessage2.style.display = 'none';
                pwDiv.style.display = 'none';
-               localStorage.setItem('istestingspaceofryokuyo3dloggedin', 1); // パスワードを保存
+               localStorage.setItem('istestingspaceofryokuyo3dloggedin', 1);
            } else {
              errorMessage.style.display = 'block';
              errorMessage2.style.display = 'block';
