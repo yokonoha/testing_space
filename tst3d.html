@@ -242,8 +242,18 @@ THE SOFTWARE.
     <p>3DモデルをARで見る (テストスペース)</p>
     </div>
     <div class="space"></div>
+<div class="B" id="pw">
+   <h3>このコンテンツにはアクセス制限があります。</h3>
+   <p>初回起動時はパスワードが必要です。</p>
+   <p>パスワードを入力してください。</p>
+   <p>Enter the password to use this page.</p>
+   <input type="password" id="password" placeholder="パスワードを入力" required>
+   <button id="submit">ログイン/Login</button>
+   <p id="error" style="color: red; display: none;">パスワードが違います。</p>
+   <p id="error2" style="color: red; display: none;">Password is incorrect.</p>
 
-     <div class="F">
+   </div>
+     <div class="F" id="hd" style="display: none;">
     <input type="file" id="fileInput" accept=".glb,.gltf" />
     
 
@@ -485,6 +495,10 @@ THE SOFTWARE.</textarea>
 <p>Admin: Ryokuyo Aoha(Y.Yokoha) @ryokuyo_aoha</p>
 </footer>
     <script>
+      if (localStorage.getItem('istestingspaceofryokuyo3dloggedin') == 1) {
+        document.getElementById('hd').style.display = 'block';
+        document.getElementById('pw').style.display = 'none';
+      }
       const fileInput = document.getElementById('fileInput');
       const viewer = document.getElementById('viewer');
 
@@ -496,5 +510,27 @@ THE SOFTWARE.</textarea>
         }
       });
     </script>
+       <script>
+         const oss = 'Enter the correct password!!'; // パスワードを設定
+         const password = oss[0]+oss[1]+oss[7]+oss[2]; // パスワードを設定
+         const submitButton = document.getElementById('submit');
+         const passwordInput = document.getElementById('password');
+         const errorMessage = document.getElementById('error');
+         const errorMessage2 = document.getElementById('error2');
+         const hdDiv = document.getElementById('hd');
+         const pwDiv = document.getElementById('pw');
+         submitButton.addEventListener('click', () => {
+           if (passwordInput.value === password) {
+             hdDiv.style.display = 'block';
+             errorMessage.style.display = 'none';
+             errorMessage2.style.display = 'none';
+               pwDiv.style.display = 'none';
+               localStorage.setItem('istestingspaceofryokuyo3dloggedin', 1); // パスワードを保存
+           } else {
+             errorMessage.style.display = 'block';
+             errorMessage2.style.display = 'block';
+           }
+         });
+       </script>
   </body>
 </html>
